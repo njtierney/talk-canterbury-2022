@@ -1,5 +1,4 @@
 # Extendable projection of social contact matrices
-<!-- NETLIFY BADGE SHOULD GO HERE-->
 
 # Abstract
 
