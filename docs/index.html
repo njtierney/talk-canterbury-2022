@@ -405,25 +405,25 @@
 <h2>What this talk is about</h2>
 <ul>
 <li class="fragment"><p>Explain <strong>how</strong> I came to help write software for infectious disease modelling</p></li>
-<li class="fragment"><p>Touch on the <strong>overall</strong> approach for methods (not enough time). The majority of my role was on software and interface design.</p></li>
-<li class="fragment"><p>Instead, I’ll discuss <strong>why</strong> we needed our own method &amp; software design decisions</p></li>
+<li class="fragment"><p>Touch on the <strong>overall</strong> approach for methods. A large portion of my role was on software and interface design.</p></li>
+<li class="fragment"><p>Discuss <strong>why</strong> we needed our own method + software design decisions</p></li>
 <li class="fragment"><p>Advocate for contributions of <strong>software design + statistical thinking</strong>: <em>the way of the research software engineer</em>, so to speak.</p></li>
 </ul>
 </section>
 <section id="the-story-so-far" class="slide level2">
 <h2>The story so far</h2>
 <ul>
-<li class="fragment"><p>2008-2012: Undergraduate + honours in Psychology</p></li>
-<li class="fragment"><p>2013 - 2017: PhD Statistics, QUT</p>
+<li class="fragment"><p>2008-2012: Undergrad + honours in Psychology @ UQ</p></li>
+<li class="fragment"><p>2013 - 2017: PhD Statistics @ QUT</p>
 <ul>
 <li class="fragment">Exploratory Data Analysis (EDA)</li>
 <li class="fragment">Bayesian / Geospatial statistics / Optimal placement</li>
 </ul></li>
-<li class="fragment"><p>2018 - 2020: Research Fellow / Lecturer at Monash</p>
+<li class="fragment"><p>2018 - 2020: Research Fellow / Lecturer @ Monash</p>
 <ul>
 <li class="fragment">Design and improve tools for EDA</li>
 </ul></li>
-<li class="fragment"><p>2020 - 2022: Research Software Engineer @ Telethon Kids Institute</p>
+<li class="fragment"><p>2020 - 2022: <strong>Research Software Engineer</strong> @ Telethon Kids Institute</p>
 <ul>
 <li class="fragment">Maintain and design tools for data analysis</li>
 </ul></li>
@@ -433,6 +433,36 @@
 <p>- Hiked The Overland, Larapinta Trail, 1/3 of Australian Alpine Walking Track, The Cape to Cape</p>
 <p>- Carve spoons (from wood)</p>
 <p>- Enjoy running long distances on trails (80K, 50K, 55K, preparing for a 168K race)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="define-research-software-engineer" class="slide level2">
+<h2>Define: Research Software Engineer</h2>
+<blockquote>
+<p>A Research Software Engineer (RSE) combines professional software engineering expertise with an intimate understanding of research.</p>
+</blockquote>
+<p>– (from https://society-rse.org/about/)</p>
+</section>
+<section id="what-sorts-of-things-does-an-rse-do" class="slide level2">
+<h2>What sorts of things does an RSE do?</h2>
+<ul>
+<li class="fragment"><p>Create software to <strong>solve research problems</strong></p></li>
+<li class="fragment"><p>Develop tools that <strong>abstract the right components</strong> to facilitate research</p></li>
+<li class="fragment"><p>Help researchers to <strong>find and learn</strong> good tools</p></li>
+<li class="fragment"><p>Support researchers with (computational) reproducibility</p></li>
+<li class="fragment"><p>(adapted from Heidi Seibold’s <a href="https://docs.google.com/presentation/d/1XQc2U2X8hiK43UzUi9IwvsvULxhVy0WzWSa_Kt4ZJv4/view#slide=id.gdbfb32d486_0_448">UseR2021 Keynote talk</a>)</p></li>
+</ul>
+<aside class="notes">
+<p>I bring this up because I feel a bit of a need to explain my background to help explain the context of what I do</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -538,7 +568,7 @@ theta[2] ~ dnorm(0.0, 0.001)</code></pre>
 <li class="fragment">efficient linear algebra</li>
 <li class="fragment">highly parallel</li>
 </ul>
-</div><div class="column" style="width:45%;">
+</div><div class="column" style="width:50%;">
 <div class="cell" data-hash="index_cache/revealjs/tf-examples_869ca40533941a4f139fd2bd2405bfea">
 <div class="cell-output-display">
 <p><img data-src="images/tf-examples.png" width="200"></p>
@@ -555,7 +585,7 @@ theta[2] ~ dnorm(0.0, 0.001)</code></pre>
 <section id="greta.gp" class="title-slide slide level1 center">
 <h1><code>greta.gp</code></h1>
 <blockquote>
-<p><code>greta.gp</code> extends <code>greta</code> to let you define Gaussian processes as part of your model. It provides a syntax to create and combine GP kernels, and use them to define either full rank or sparse Gaussian processes.</p>
+<p>Extends <code>greta</code> to let you define Gaussian processes as part of your model. It provides a syntax to create and combine GP kernels, and use them to define either full rank or sparse Gaussian processes.</p>
 </blockquote>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -575,36 +605,6 @@ theta[2] ~ dnorm(0.0, 0.001)</code></pre>
 </div>
 </div>
 </div>
-</section>
-<section id="define-research-software-engineer" class="slide level2">
-<h2>Define: Research Software Engineer</h2>
-<blockquote>
-<p>A Research Software Engineer (RSE) combines professional software engineering expertise with an intimate understanding of research.</p>
-</blockquote>
-<p>– (from https://society-rse.org/about/)</p>
-</section>
-<section id="what-sorts-of-things-does-an-rse-do" class="slide level2">
-<h2>What sorts of things does an RSE do?</h2>
-<ul>
-<li class="fragment"><p>Create software to <strong>solve research problems</strong></p></li>
-<li class="fragment"><p>Develop tools that <strong>abstract the right components</strong> to facilitate research</p></li>
-<li class="fragment"><p>Help researchers to <strong>find and learn</strong> good tools</p></li>
-<li class="fragment"><p>Support researchers with (computational) reproducibility</p></li>
-<li class="fragment"><p>(adapted from Heidi Seibold’s <a href="https://docs.google.com/presentation/d/1XQc2U2X8hiK43UzUi9IwvsvULxhVy0WzWSa_Kt4ZJv4/view#slide=id.gdbfb32d486_0_448">UseR2021 Keynote talk</a>)</p></li>
-</ul>
-<aside class="notes">
-<p>I bring this up because I feel a bit of a need to explain my background to help explain the context of what I do</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="joining-an-infectious-disease-team" class="slide level2">
 <h2>Joining an infectious disease team</h2>
@@ -737,7 +737,7 @@ Nick  FALSE FALSE    NA</code></pre>
 <li class="fragment"><p>We don’t. Well, not in Australia. Yet.</p></li>
 <li class="fragment"><p>You need to conduct a surveys where people diary the amount and manner of daily contacts they have.</p></li>
 <li class="fragment"><p><a href="https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074">Mossong et al</a> have this for 8 countries in Europe</p></li>
-<li class="fragment"><p>Referred to as the POLYMOD study</p></li>
+<li class="fragment"><p>Referred to as the <strong>POLYMOD</strong> study</p></li>
 </ul>
 <aside class="notes">
 <ul>
@@ -794,7 +794,7 @@ Nick  FALSE FALSE    NA</code></pre>
 <ul>
 <li class="fragment">Pre-existing statistical methodologies project empirical contact matrices to new countries.</li>
 <li class="fragment">New projected contact matrices: “synthetic contact matrices”</li>
-<li class="fragment">Use existing contact surveys (e.g., Mossong)</li>
+<li class="fragment">Use existing contact surveys (e.g., <strong>POLYMOD</strong>)</li>
 <li class="fragment">Use setting-specific survey data on household, school, classroom, and workplace composition</li>
 <li class="fragment">Combine with empirical data on contact patterns in Europe using statistical models</li>
 </ul>
@@ -811,22 +811,19 @@ Nick  FALSE FALSE    NA</code></pre>
 <h2>Brief explainer of Prem</h2>
 <ul>
 <li class="fragment"><p><span class="math inline">\(X^{L}_{i,\alpha} \sim Poisson(\mu_{i, \alpha}^{L})\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(X^{L}_{i,\alpha}\)</span> is the number of contacts made by individual <span class="math inline">\(i\)</span> at a particular location <span class="math inline">\(L\)</span> with someone in age group <span class="math inline">\(\alpha\)</span> is modelled to be Poisson with mean <span class="math inline">\(\mu_{i}^{L}\)</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(X^{L}_{i,\alpha}\)</span> is the number of contacts made by individual <span class="math inline">\(i\)</span> at a particular location <span class="math inline">\(L\)</span> with someone in age group <span class="math inline">\(\alpha\)</span> is modelled to be Poisson with mean <span class="math inline">\(\mu_{i, \alpha}^{L}\)</span>.</p></li>
 <li class="fragment"><p>the ages of individual <span class="math inline">\(i\)</span>, <span class="math inline">\(\alpha_i\)</span>, and their contact, <span class="math inline">\(\alpha\)</span> are broken into 5 year age intervals</p></li>
-<li class="fragment"><p><span class="math inline">\(L\)</span> denotes contact location: L = … H (Home), W (Work), S (School), O (other)</p></li>
+<li class="fragment"><p><span class="math inline">\(L\)</span> is contact location: L = …Home, Work, School, Other</p></li>
 <li class="fragment"><p>Main thrust: Contact matrices are projected because the age distribution of population is included in <span class="math inline">\(\mu\)</span></p></li>
 </ul>
 </section>
-<section id="brief-explainer-of-prem-1" class="slide level2">
-<h2>Brief explainer of Prem</h2>
-<ul>
-<li class="fragment"><p>Core ideas:</p>
+<section id="core-ideas-of-prem" class="slide level2">
+<h2>Core ideas of Prem</h2>
 <ul>
 <li class="fragment">Build a model from the POLYMOD study, predicting number of contacts</li>
 <li class="fragment">Incorporate key age information for different locations (home, work, school, other)</li>
 <li class="fragment">Extrapolate the number of contacts to different countries, using age information from those countries</li>
 <li class="fragment">Create a new contact matrix for a given country</li>
-</ul></li>
 </ul>
 </section>
 <section id="section-1" class="slide level2" data-background-image="images/prem-dir-mats.png" data-background-size="contain">
@@ -920,18 +917,41 @@ Nick  FALSE FALSE    NA</code></pre>
 <section id="building-our-own-extension" class="slide level2">
 <h2>Building our own extension</h2>
 <ul>
-<li class="fragment"><p>Nick Golding wrote a new method that was able to be more flexible, using GAMs instead of Bayesian approach.</p></li>
+<li class="fragment"><p>Nick Golding wrote a new method that was able to be more flexible, using Generalised Additive Models (GAMs) instead of Bayesian approach.</p></li>
 <li class="fragment"><p>I was tasked with writing software from initial model fitting code, with guidance from Nick</p></li>
 <li class="fragment"><p>Named the package, <code>conmat</code>, (<a href="https://github.com/njtierney/conmat">repo</a>), creating a home for code for others to contribute to.</p></li>
 <li class="fragment"><p>In R package form, this made it easier for us to develop and extend software on demand for our needs</p></li>
 </ul>
 </section>
+<section id="how-does-the-model-work" class="slide level2">
+<h2>How does the model work?</h2>
+<p>(simplified)</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>mgcv<span class="sc">::</span><span class="fu">bam</span>(</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="at">formula =</span> contacts <span class="sc">~</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="co"># deviation of contact age distribution from population age distribution</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>    <span class="fu">s</span>(age_to) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="co"># number of contacts by age</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="fu">s</span>(age_from) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="co"># intergenerational contact patterns - enables the off-diagonals</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="fu">s</span>(<span class="fu">abs</span>(age_from <span class="sc">-</span> age_to)) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a>    <span class="co"># interaction between intergenerational patterns and age_from, to remove</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>    <span class="co"># ridge for some ages and settings</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>    <span class="fu">s</span>(<span class="fu">abs</span>(age_from <span class="sc">-</span> age_to), age_from) <span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a>    <span class="co"># probabilities of both attending (any) school/work</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a>    school_probability <span class="sc">+</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a>    work_probability <span class="sc">+</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a>    <span class="fu">offset</span>(school_popn<span class="sc">/</span>work_popn),</span>
+<span id="cb9-16"><a href="#cb9-16"></a>    <span class="at">family =</span> stats<span class="sc">::</span>poisson,</span>
+<span id="cb9-17"><a href="#cb9-17"></a>    <span class="co"># </span><span class="al">NOTE</span><span class="co">: the offset of participants allows us to get the rate per person</span></span>
+<span id="cb9-18"><a href="#cb9-18"></a>    <span class="at">offset =</span> <span class="fu">log</span>(participants)</span>
+<span id="cb9-19"><a href="#cb9-19"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="demonstration-of-conmat" class="slide level2">
 <h2>Demonstration of conmat</h2>
 <div class="cell" data-hash="index_cache/revealjs/get-fairfield_ec783998d9e68502d98c7beb5b8c6e3e">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">library</span>(conmat)</span>
-<span id="cb9-2"><a href="#cb9-2"></a>fairfield <span class="ot">&lt;-</span> <span class="fu">abs_age_lga</span>(<span class="st">"Fairfield (C)"</span>)</span>
-<span id="cb9-3"><a href="#cb9-3"></a>fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(conmat)</span>
+<span id="cb10-2"><a href="#cb10-2"></a>fairfield <span class="ot">&lt;-</span> <span class="fu">abs_age_lga</span>(<span class="st">"Fairfield (C)"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3"></a>fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 18 × 4
    lga           lower.age.limit  year population
@@ -960,11 +980,11 @@ Nick  FALSE FALSE    NA</code></pre>
 <section id="extrapolate-to-a-new-population" class="slide level2">
 <h2>Extrapolate to a new population</h2>
 <div class="cell" data-hash="index_cache/revealjs/extrapolate-fairfield_44930d56c0ea9e908372037f291e8ef0">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>synthetic_fairfield <span class="ot">&lt;-</span> <span class="fu">extrapolate_polymod</span>(</span>
-<span id="cb11-2"><a href="#cb11-2"></a> <span class="at">population =</span> fairfield,</span>
-<span id="cb11-3"><a href="#cb11-3"></a> <span class="at">age_breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">75</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="cn">Inf</span>) <span class="co"># default</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>)</span>
-<span id="cb11-5"><a href="#cb11-5"></a>synthetic_fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>synthetic_fairfield <span class="ot">&lt;-</span> <span class="fu">extrapolate_polymod</span>(</span>
+<span id="cb12-2"><a href="#cb12-2"></a> <span class="at">population =</span> fairfield,</span>
+<span id="cb12-3"><a href="#cb12-3"></a> <span class="at">age_breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">75</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="cn">Inf</span>) <span class="co"># default</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>)</span>
+<span id="cb12-5"><a href="#cb12-5"></a>synthetic_fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$home
               [0,5)     [5,10)    [10,15)    [15,20)    [20,25)    [25,30)
@@ -1253,7 +1273,7 @@ $all
 <section id="contact-matrix-fairfield" class="slide level2">
 <h2>Contact matrix: Fairfield</h2>
 <div class="cell" data-hash="index_cache/revealjs/plot-matrix-fairfield_9a4c57d5217cd158625d3fcd4cfdead2">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">plot_matrix</span>(synthetic_fairfield<span class="sc">$</span>home)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">plot_matrix</span>(synthetic_fairfield<span class="sc">$</span>home)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="index_files/figure-revealjs/plot-matrix-fairfield-1.png" width="960" class="r-stretch"><div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-21_955b014e34505145d86d1624fe0d780f">
@@ -1266,32 +1286,27 @@ $all
 <section id="contact-matrix-australia" class="slide level2">
 <h2>Contact matrix: Australia</h2>
 <div class="cell" data-hash="index_cache/revealjs/plot-matrix-polymod_c4cd4f3de5277971cd41d17931f48697">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">plot_matrix</span>(synthetic_polymod_oz<span class="sc">$</span>home)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">plot_matrix</span>(synthetic_polymod_oz<span class="sc">$</span>home)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="index_files/figure-revealjs/plot-matrix-polymod-1.png" width="960" class="r-stretch"></section></section>
-<section>
-<section id="how-the-model-works" class="title-slide slide level1 center">
-<h1>How the model works</h1>
-
-</section>
+<img data-src="index_files/figure-revealjs/plot-matrix-polymod-1.png" width="960" class="r-stretch"></section>
 <section id="create-a-next-generation-matrix" class="slide level2">
 <h2>Create A Next Generation Matrix</h2>
 <ul>
 <li class="fragment">Once infected, a person can transmit an infectious disease to another, creating <strong>generations</strong> of infected individuals.</li>
-<li class="fragment">We can define a matrix describing the <strong>number of newly infected</strong> individuals in given categories, such as age, for consecutive generations.</li>
+<li class="fragment">We can define a matrix describing the <strong>number of newly infected</strong> individuals in age groups, for consecutive generations.</li>
 <li class="fragment">This matrix is called a <strong>next generation matrix</strong> (NGM).</li>
 </ul>
 </section>
 <section id="create-a-next-generation-matrix-1" class="slide level2">
 <h2>Create A Next Generation Matrix</h2>
 <div class="cell" data-hash="index_cache/revealjs/generate-ngm-fairfield_3ad4e4d17209491d90c6dbf2ec0fe25a">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>ngm_fairfield <span class="ot">&lt;-</span> <span class="fu">generate_ngm</span>(</span>
-<span id="cb15-2"><a href="#cb15-2"></a>  <span class="at">lga_name =</span> <span class="st">"Fairfield (C)"</span>,</span>
-<span id="cb15-3"><a href="#cb15-3"></a>  <span class="at">age_breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">80</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="cn">Inf</span>),</span>
-<span id="cb15-4"><a href="#cb15-4"></a>  <span class="at">R_target =</span> <span class="fl">1.5</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a>)</span>
-<span id="cb15-6"><a href="#cb15-6"></a>ngm_fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>ngm_fairfield <span class="ot">&lt;-</span> <span class="fu">generate_ngm</span>(</span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="at">lga_name =</span> <span class="st">"Fairfield (C)"</span>,</span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="at">age_breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">80</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="cn">Inf</span>),</span>
+<span id="cb16-4"><a href="#cb16-4"></a>  <span class="at">R_target =</span> <span class="fl">1.5</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>)</span>
+<span id="cb16-6"><a href="#cb16-6"></a>ngm_fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$home
                [0,5)      [5,10)     [10,15)     [15,20)     [20,25)
@@ -1644,7 +1659,7 @@ $all
 <section id="example-vaccination-data" class="slide level2">
 <h2>Example vaccination data</h2>
 <div class="cell" data-hash="index_cache/revealjs/vaccination-example-data_547aa4b1d159906f674a9d9155a42fd0">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>vaccination_effect_example_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>vaccination_effect_example_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 17 × 4
    age_band coverage acquisition transmission
@@ -1685,15 +1700,15 @@ $all
 <section id="apply-vaccination-1" class="slide level2">
 <h2>Apply vaccination</h2>
 <div class="cell" data-hash="index_cache/revealjs/apply-vaccination-fairfield_5e35bfd32700a74e931ef1619096c604">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>ngm_vacc_fairfield <span class="ot">&lt;-</span> <span class="fu">apply_vaccination</span>(</span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="at">ngm =</span> ngm_fairfield,</span>
-<span id="cb19-3"><a href="#cb19-3"></a>  <span class="at">data =</span> vaccination_effect_example_data,</span>
-<span id="cb19-4"><a href="#cb19-4"></a>  <span class="at">coverage_col =</span> coverage,</span>
-<span id="cb19-5"><a href="#cb19-5"></a>  <span class="at">acquisition_col =</span> acquisition,</span>
-<span id="cb19-6"><a href="#cb19-6"></a>  <span class="at">transmission_col =</span> transmission</span>
-<span id="cb19-7"><a href="#cb19-7"></a>)</span>
-<span id="cb19-8"><a href="#cb19-8"></a></span>
-<span id="cb19-9"><a href="#cb19-9"></a>ngm_vacc_fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>ngm_vacc_fairfield <span class="ot">&lt;-</span> <span class="fu">apply_vaccination</span>(</span>
+<span id="cb20-2"><a href="#cb20-2"></a>  <span class="at">ngm =</span> ngm_fairfield,</span>
+<span id="cb20-3"><a href="#cb20-3"></a>  <span class="at">data =</span> vaccination_effect_example_data,</span>
+<span id="cb20-4"><a href="#cb20-4"></a>  <span class="at">coverage_col =</span> coverage,</span>
+<span id="cb20-5"><a href="#cb20-5"></a>  <span class="at">acquisition_col =</span> acquisition,</span>
+<span id="cb20-6"><a href="#cb20-6"></a>  <span class="at">transmission_col =</span> transmission</span>
+<span id="cb20-7"><a href="#cb20-7"></a>)</span>
+<span id="cb20-8"><a href="#cb20-8"></a></span>
+<span id="cb20-9"><a href="#cb20-9"></a>ngm_vacc_fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$home
                 [0,5)       [5,10)      [10,15)      [15,20)      [20,25)
@@ -2073,15 +2088,16 @@ $all
 <li class="fragment">Model fitting is fixed and rigid
 <ul>
 <li class="fragment">Although there are arguments for <code>age_break</code></li>
+<li class="fragment">You cannot change the model formula (yet)</li>
 </ul></li>
 <li class="fragment">Design decision to provide access to fitting the model</li>
 <li class="fragment">Tradeoff: <strong>easy to use</strong> vs <strong>more complex to create</strong></li>
 </ul>
 <div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-27_ce3534feaf79bdb8adb1a9fdbb741f41">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>synthetic_fairfield <span class="ot">&lt;-</span> <span class="fu">extrapolate_polymod</span>(</span>
-<span id="cb21-2"><a href="#cb21-2"></a> <span class="at">population =</span> fairfield,</span>
-<span id="cb21-3"><a href="#cb21-3"></a> <span class="at">age_breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">75</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="cn">Inf</span>)</span>
-<span id="cb21-4"><a href="#cb21-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>synthetic_fairfield <span class="ot">&lt;-</span> <span class="fu">extrapolate_polymod</span>(</span>
+<span id="cb22-2"><a href="#cb22-2"></a> <span class="at">population =</span> fairfield,</span>
+<span id="cb22-3"><a href="#cb22-3"></a> <span class="at">age_breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">75</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="cn">Inf</span>)</span>
+<span id="cb22-4"><a href="#cb22-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="challenges-in-design-1" class="slide level2">
@@ -2094,7 +2110,7 @@ $all
 </ul></li>
 </ul>
 <div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-28_832b913dba5ba17505645654e189a74e">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 18 × 4
    lga           lower.age.limit  year population
@@ -2126,11 +2142,11 @@ $all
 <li class="fragment">Provide arguments for specifying the age and population information (<code>age_col</code> and <code>population_col</code>)</li>
 </ol>
 <div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-29_daeb03acb72da07255c19ce4d65fcb19">
-<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">extrapolate_polymod</span>(</span>
-<span id="cb24-2"><a href="#cb24-2"></a> <span class="at">population =</span> fairfield,</span>
-<span id="cb24-3"><a href="#cb24-3"></a> <span class="at">age_col =</span> lower.age.limit,</span>
-<span id="cb24-4"><a href="#cb24-4"></a> <span class="at">population_col =</span> population</span>
-<span id="cb24-5"><a href="#cb24-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">extrapolate_polymod</span>(</span>
+<span id="cb25-2"><a href="#cb25-2"></a> <span class="at">population =</span> fairfield,</span>
+<span id="cb25-3"><a href="#cb25-3"></a> <span class="at">age_col =</span> lower.age.limit,</span>
+<span id="cb25-4"><a href="#cb25-4"></a> <span class="at">population_col =</span> population</span>
+<span id="cb25-5"><a href="#cb25-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="challenges-in-design-3" class="slide level2">
@@ -2139,14 +2155,14 @@ $all
 <li class="fragment">Some kind of class based approach, where we encode or validate the <code>age</code> and <code>population</code> columns.</li>
 </ol>
 <div class="cell" data-hash="index_cache/revealjs/unnamed-chunk-30_3c10fed2566ce6c2e266494f50e401e7">
-<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="3-4|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>fairfield_pop <span class="ot">&lt;-</span> <span class="fu">new_population</span>(</span>
-<span id="cb25-2"><a href="#cb25-2"></a>  <span class="at">data =</span> fairfield,</span>
-<span id="cb25-3"><a href="#cb25-3"></a>  <span class="at">age =</span> lower.age.limit,</span>
-<span id="cb25-4"><a href="#cb25-4"></a>  <span class="at">population =</span> population</span>
-<span id="cb25-5"><a href="#cb25-5"></a>)</span>
-<span id="cb25-6"><a href="#cb25-6"></a><span class="fu">extrapolate_polymod</span>(</span>
-<span id="cb25-7"><a href="#cb25-7"></a> <span class="at">population =</span> fairfield_pop</span>
-<span id="cb25-8"><a href="#cb25-8"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="3-4|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>fairfield_pop <span class="ot">&lt;-</span> <span class="fu">new_population</span>(</span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="at">data =</span> fairfield,</span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="at">age =</span> lower.age.limit,</span>
+<span id="cb26-4"><a href="#cb26-4"></a>  <span class="at">population =</span> population</span>
+<span id="cb26-5"><a href="#cb26-5"></a>)</span>
+<span id="cb26-6"><a href="#cb26-6"></a><span class="fu">extrapolate_polymod</span>(</span>
+<span id="cb26-7"><a href="#cb26-7"></a> <span class="at">population =</span> fairfield_pop</span>
+<span id="cb26-8"><a href="#cb26-8"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="challenges-in-design-australian-centric" class="slide level2">
@@ -2156,33 +2172,33 @@ $all
 <li class="fragment">A feature of doing things for a specific purpose and not thinking generally</li>
 </ul>
 <div class="cell" data-hash="index_cache/revealjs/example-ngm_bd58df3315f20bbc4c77318cef9be974">
-<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>ngm_fairfield <span class="ot">&lt;-</span> <span class="fu">generate_ngm</span>(</span>
-<span id="cb26-2"><a href="#cb26-2"></a>  <span class="at">lga_name =</span> <span class="st">"Fairfield (C)"</span>,</span>
-<span id="cb26-3"><a href="#cb26-3"></a>  <span class="at">age_breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">80</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="cn">Inf</span>),</span>
-<span id="cb26-4"><a href="#cb26-4"></a>  <span class="at">R_target =</span> <span class="fl">1.5</span></span>
-<span id="cb26-5"><a href="#cb26-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>ngm_fairfield <span class="ot">&lt;-</span> <span class="fu">generate_ngm</span>(</span>
+<span id="cb27-2"><a href="#cb27-2"></a>  <span class="at">lga_name =</span> <span class="st">"Fairfield (C)"</span>,</span>
+<span id="cb27-3"><a href="#cb27-3"></a>  <span class="at">age_breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">80</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="cn">Inf</span>),</span>
+<span id="cb27-4"><a href="#cb27-4"></a>  <span class="at">R_target =</span> <span class="fl">1.5</span></span>
+<span id="cb27-5"><a href="#cb27-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="challenges-in-design-australian-centric-1" class="slide level2">
 <h2>Challenges in Design: Australian-Centric</h2>
 <ul>
 <li class="fragment">Change of interface means breaking existing code</li>
-<li class="fragment">Can get around this with versioning and releases, or two functions</li>
+<li class="fragment">Can instead use versioning &amp; releases, or 2 functions</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="cell" data-hash="index_cache/revealjs/example-ngm-2_098218915f92af1e73f7565be4445248">
-<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="1-2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">generate_ngm_oz</span>(</span>
-<span id="cb27-2"><a href="#cb27-2"></a>  <span class="at">lga_name =</span> <span class="st">"Fairfield (C)"</span>,</span>
-<span id="cb27-3"><a href="#cb27-3"></a>  <span class="at">R_target =</span> <span class="fl">1.5</span></span>
-<span id="cb27-4"><a href="#cb27-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="1-2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">generate_ngm_oz</span>(</span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="at">lga_name =</span> <span class="st">"Fairfield (C)"</span>,</span>
+<span id="cb28-3"><a href="#cb28-3"></a>  <span class="at">R_target =</span> <span class="fl">1.5</span></span>
+<span id="cb28-4"><a href="#cb28-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="cell" data-hash="index_cache/revealjs/example-ngm-3_dc542954cbc6ecc046f3a206ee8eda45">
-<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="1-2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">generate_ngm</span>(</span>
-<span id="cb28-2"><a href="#cb28-2"></a>  <span class="at">population =</span> fairfield,</span>
-<span id="cb28-3"><a href="#cb28-3"></a>  <span class="at">R_target =</span> <span class="fl">1.5</span></span>
-<span id="cb28-4"><a href="#cb28-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="1-2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">generate_ngm</span>(</span>
+<span id="cb29-2"><a href="#cb29-2"></a>  <span class="at">population =</span> fairfield,</span>
+<span id="cb29-3"><a href="#cb29-3"></a>  <span class="at">R_target =</span> <span class="fl">1.5</span></span>
+<span id="cb29-4"><a href="#cb29-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2190,8 +2206,8 @@ $all
 <section id="challenges-in-design-4" class="slide level2">
 <h2>Challenges in Design</h2>
 <ul>
-<li class="fragment">Rigid model design means easy to use, at cost of flexibility</li>
-<li class="fragment">Specified variable names is fragile, but saves typing</li>
+<li class="fragment">Rigid design means easy to use at <strong>cost of flexibility</strong></li>
+<li class="fragment">Specified variable names is fragile, but <strong>saves typing</strong></li>
 <li class="fragment">Extra functions could always be added to be more flexible variants</li>
 </ul>
 </section>
@@ -2252,70 +2268,70 @@ $all
 <h1>Extras</h1>
 
 </section>
-<section id="how-does-the-model-work" class="slide level2">
+<section id="how-does-the-model-work-1" class="slide level2">
 <h2>How does the model work?</h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>fit_single_contact_model <span class="ot">&lt;-</span> <span class="cf">function</span>(contact_data, population) {</span>
-<span id="cb29-2"><a href="#cb29-2"></a></span>
-<span id="cb29-3"><a href="#cb29-3"></a>  <span class="co"># programatically add the offset term to the formula, so the model defines</span></span>
-<span id="cb29-4"><a href="#cb29-4"></a>  <span class="co"># information about the setting, without us having to pass it through to the</span></span>
-<span id="cb29-5"><a href="#cb29-5"></a>  <span class="co"># prediction data</span></span>
-<span id="cb29-6"><a href="#cb29-6"></a>  formula_no_offset <span class="ot">&lt;-</span> contacts <span class="sc">~</span></span>
-<span id="cb29-7"><a href="#cb29-7"></a>    <span class="co"># deviation of contact age distribution from population age distribution</span></span>
-<span id="cb29-8"><a href="#cb29-8"></a>    <span class="fu">s</span>(age_to) <span class="sc">+</span></span>
-<span id="cb29-9"><a href="#cb29-9"></a>    <span class="co"># number of contacts by age</span></span>
-<span id="cb29-10"><a href="#cb29-10"></a>    <span class="fu">s</span>(age_from) <span class="sc">+</span></span>
-<span id="cb29-11"><a href="#cb29-11"></a>    <span class="co"># intergenerational contact patterns - enables the off-diagonals</span></span>
-<span id="cb29-12"><a href="#cb29-12"></a>    <span class="fu">s</span>(<span class="fu">abs</span>(age_from <span class="sc">-</span> age_to)) <span class="sc">+</span></span>
-<span id="cb29-13"><a href="#cb29-13"></a>    <span class="co"># interaction between intergenerational patterns and age_from, to remove</span></span>
-<span id="cb29-14"><a href="#cb29-14"></a>    <span class="co"># ridge for some ages and settings</span></span>
-<span id="cb29-15"><a href="#cb29-15"></a>    <span class="fu">s</span>(<span class="fu">abs</span>(age_from <span class="sc">-</span> age_to), age_from) <span class="sc">+</span></span>
-<span id="cb29-16"><a href="#cb29-16"></a>    <span class="co"># probabilities of both attending (any) school/work</span></span>
-<span id="cb29-17"><a href="#cb29-17"></a>    school_probability <span class="sc">+</span></span>
-<span id="cb29-18"><a href="#cb29-18"></a>    work_probability</span>
-<span id="cb29-19"><a href="#cb29-19"></a>  </span>
-<span id="cb29-20"><a href="#cb29-20"></a>  <span class="co"># choose the offset variable based on the setting</span></span>
-<span id="cb29-21"><a href="#cb29-21"></a>  setting <span class="ot">&lt;-</span> contact_data<span class="sc">$</span>setting[<span class="dv">1</span>]</span>
-<span id="cb29-22"><a href="#cb29-22"></a>  offset_variable <span class="ot">&lt;-</span> <span class="cf">switch</span>(</span>
-<span id="cb29-23"><a href="#cb29-23"></a>    setting,</span>
-<span id="cb29-24"><a href="#cb29-24"></a>    <span class="at">school =</span> <span class="st">"log_contactable_population_school"</span>,</span>
-<span id="cb29-25"><a href="#cb29-25"></a>    <span class="st">"log_contactable_population"</span></span>
-<span id="cb29-26"><a href="#cb29-26"></a>  )</span>
-<span id="cb29-27"><a href="#cb29-27"></a>  </span>
-<span id="cb29-28"><a href="#cb29-28"></a>  <span class="co"># add multiplicative offset for population contactable, to enable</span></span>
-<span id="cb29-29"><a href="#cb29-29"></a>  <span class="co"># extrapolation to new demographies</span></span>
-<span id="cb29-30"><a href="#cb29-30"></a>  <span class="co"># in mgcv, this part of the offset gets used in prediction, which </span></span>
-<span id="cb29-31"><a href="#cb29-31"></a>  <span class="co"># is what we want. Those are the "contactable" parts, which we use</span></span>
-<span id="cb29-32"><a href="#cb29-32"></a>  <span class="co"># to extrapolate to new demographics.</span></span>
-<span id="cb29-33"><a href="#cb29-33"></a>  formula_offset <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"~. + offset(%s)"</span>, offset_variable)</span>
-<span id="cb29-34"><a href="#cb29-34"></a>  formula <span class="ot">&lt;-</span> <span class="fu">update</span>(formula_no_offset, formula_offset)</span>
-<span id="cb29-35"><a href="#cb29-35"></a>  </span>
-<span id="cb29-36"><a href="#cb29-36"></a>  <span class="co"># contact model for all locations together</span></span>
-<span id="cb29-37"><a href="#cb29-37"></a>  contact_data <span class="sc">%&gt;%</span></span>
-<span id="cb29-38"><a href="#cb29-38"></a>    <span class="fu">add_modelling_features</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb29-39"><a href="#cb29-39"></a>      <span class="co"># The modelling features added here are:</span></span>
-<span id="cb29-40"><a href="#cb29-40"></a>        <span class="co"># the school and work offsets</span></span>
-<span id="cb29-41"><a href="#cb29-41"></a>        <span class="co"># pop_age_to (interpolated population)</span></span>
-<span id="cb29-42"><a href="#cb29-42"></a>        <span class="co"># `log_contactable_population_school`, and ` log_contactable_population`</span></span>
-<span id="cb29-43"><a href="#cb29-43"></a>      population <span class="ot">=</span> population</span>
-<span id="cb29-44"><a href="#cb29-44"></a>    mgcv<span class="sc">::</span><span class="fu">bam</span>(</span>
-<span id="cb29-45"><a href="#cb29-45"></a>      <span class="at">formula =</span> formula,</span>
-<span id="cb29-46"><a href="#cb29-46"></a>      <span class="at">family =</span> stats<span class="sc">::</span>poisson,</span>
-<span id="cb29-47"><a href="#cb29-47"></a>      <span class="co"># add number of participants as a multilpicative offset here rather than in</span></span>
-<span id="cb29-48"><a href="#cb29-48"></a>      <span class="co"># the formula, so it is not needed for prediction,</span></span>
-<span id="cb29-49"><a href="#cb29-49"></a>      <span class="co"># </span><span class="al">NOTE</span><span class="co">: the offset of participants allows us to get the rate per person</span></span>
-<span id="cb29-50"><a href="#cb29-50"></a>      <span class="at">offset =</span> <span class="fu">log</span>(participants),</span>
-<span id="cb29-51"><a href="#cb29-51"></a>      <span class="at">data =</span> .</span>
-<span id="cb29-52"><a href="#cb29-52"></a>    )</span>
-<span id="cb29-53"><a href="#cb29-53"></a>  </span>
-<span id="cb29-54"><a href="#cb29-54"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>fit_single_contact_model <span class="ot">&lt;-</span> <span class="cf">function</span>(contact_data, population) {</span>
+<span id="cb30-2"><a href="#cb30-2"></a></span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="co"># programatically add the offset term to the formula, so the model defines</span></span>
+<span id="cb30-4"><a href="#cb30-4"></a>  <span class="co"># information about the setting, without us having to pass it through to the</span></span>
+<span id="cb30-5"><a href="#cb30-5"></a>  <span class="co"># prediction data</span></span>
+<span id="cb30-6"><a href="#cb30-6"></a>  formula_no_offset <span class="ot">&lt;-</span> contacts <span class="sc">~</span></span>
+<span id="cb30-7"><a href="#cb30-7"></a>    <span class="co"># deviation of contact age distribution from population age distribution</span></span>
+<span id="cb30-8"><a href="#cb30-8"></a>    <span class="fu">s</span>(age_to) <span class="sc">+</span></span>
+<span id="cb30-9"><a href="#cb30-9"></a>    <span class="co"># number of contacts by age</span></span>
+<span id="cb30-10"><a href="#cb30-10"></a>    <span class="fu">s</span>(age_from) <span class="sc">+</span></span>
+<span id="cb30-11"><a href="#cb30-11"></a>    <span class="co"># intergenerational contact patterns - enables the off-diagonals</span></span>
+<span id="cb30-12"><a href="#cb30-12"></a>    <span class="fu">s</span>(<span class="fu">abs</span>(age_from <span class="sc">-</span> age_to)) <span class="sc">+</span></span>
+<span id="cb30-13"><a href="#cb30-13"></a>    <span class="co"># interaction between intergenerational patterns and age_from, to remove</span></span>
+<span id="cb30-14"><a href="#cb30-14"></a>    <span class="co"># ridge for some ages and settings</span></span>
+<span id="cb30-15"><a href="#cb30-15"></a>    <span class="fu">s</span>(<span class="fu">abs</span>(age_from <span class="sc">-</span> age_to), age_from) <span class="sc">+</span></span>
+<span id="cb30-16"><a href="#cb30-16"></a>    <span class="co"># probabilities of both attending (any) school/work</span></span>
+<span id="cb30-17"><a href="#cb30-17"></a>    school_probability <span class="sc">+</span></span>
+<span id="cb30-18"><a href="#cb30-18"></a>    work_probability</span>
+<span id="cb30-19"><a href="#cb30-19"></a>  </span>
+<span id="cb30-20"><a href="#cb30-20"></a>  <span class="co"># choose the offset variable based on the setting</span></span>
+<span id="cb30-21"><a href="#cb30-21"></a>  setting <span class="ot">&lt;-</span> contact_data<span class="sc">$</span>setting[<span class="dv">1</span>]</span>
+<span id="cb30-22"><a href="#cb30-22"></a>  offset_variable <span class="ot">&lt;-</span> <span class="cf">switch</span>(</span>
+<span id="cb30-23"><a href="#cb30-23"></a>    setting,</span>
+<span id="cb30-24"><a href="#cb30-24"></a>    <span class="at">school =</span> <span class="st">"log_contactable_population_school"</span>,</span>
+<span id="cb30-25"><a href="#cb30-25"></a>    <span class="st">"log_contactable_population"</span></span>
+<span id="cb30-26"><a href="#cb30-26"></a>  )</span>
+<span id="cb30-27"><a href="#cb30-27"></a>  </span>
+<span id="cb30-28"><a href="#cb30-28"></a>  <span class="co"># add multiplicative offset for population contactable, to enable</span></span>
+<span id="cb30-29"><a href="#cb30-29"></a>  <span class="co"># extrapolation to new demographies</span></span>
+<span id="cb30-30"><a href="#cb30-30"></a>  <span class="co"># in mgcv, this part of the offset gets used in prediction, which </span></span>
+<span id="cb30-31"><a href="#cb30-31"></a>  <span class="co"># is what we want. Those are the "contactable" parts, which we use</span></span>
+<span id="cb30-32"><a href="#cb30-32"></a>  <span class="co"># to extrapolate to new demographics.</span></span>
+<span id="cb30-33"><a href="#cb30-33"></a>  formula_offset <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"~. + offset(%s)"</span>, offset_variable)</span>
+<span id="cb30-34"><a href="#cb30-34"></a>  formula <span class="ot">&lt;-</span> <span class="fu">update</span>(formula_no_offset, formula_offset)</span>
+<span id="cb30-35"><a href="#cb30-35"></a>  </span>
+<span id="cb30-36"><a href="#cb30-36"></a>  <span class="co"># contact model for all locations together</span></span>
+<span id="cb30-37"><a href="#cb30-37"></a>  contact_data <span class="sc">%&gt;%</span></span>
+<span id="cb30-38"><a href="#cb30-38"></a>    <span class="fu">add_modelling_features</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb30-39"><a href="#cb30-39"></a>      <span class="co"># The modelling features added here are:</span></span>
+<span id="cb30-40"><a href="#cb30-40"></a>        <span class="co"># the school and work offsets</span></span>
+<span id="cb30-41"><a href="#cb30-41"></a>        <span class="co"># pop_age_to (interpolated population)</span></span>
+<span id="cb30-42"><a href="#cb30-42"></a>        <span class="co"># `log_contactable_population_school`, and ` log_contactable_population`</span></span>
+<span id="cb30-43"><a href="#cb30-43"></a>      population <span class="ot">=</span> population</span>
+<span id="cb30-44"><a href="#cb30-44"></a>    mgcv<span class="sc">::</span><span class="fu">bam</span>(</span>
+<span id="cb30-45"><a href="#cb30-45"></a>      <span class="at">formula =</span> formula,</span>
+<span id="cb30-46"><a href="#cb30-46"></a>      <span class="at">family =</span> stats<span class="sc">::</span>poisson,</span>
+<span id="cb30-47"><a href="#cb30-47"></a>      <span class="co"># add number of participants as a multilpicative offset here rather than in</span></span>
+<span id="cb30-48"><a href="#cb30-48"></a>      <span class="co"># the formula, so it is not needed for prediction,</span></span>
+<span id="cb30-49"><a href="#cb30-49"></a>      <span class="co"># </span><span class="al">NOTE</span><span class="co">: the offset of participants allows us to get the rate per person</span></span>
+<span id="cb30-50"><a href="#cb30-50"></a>      <span class="at">offset =</span> <span class="fu">log</span>(participants),</span>
+<span id="cb30-51"><a href="#cb30-51"></a>      <span class="at">data =</span> .</span>
+<span id="cb30-52"><a href="#cb30-52"></a>    )</span>
+<span id="cb30-53"><a href="#cb30-53"></a>  </span>
+<span id="cb30-54"><a href="#cb30-54"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="alt-approach-to-conmat-model" class="slide level2">
 <h2>Alt approach to conmat model</h2>
 <div class="cell" data-hash="index_cache/revealjs/show-fairfield_97a51d6a5badc5e1406c5c9eb2e60906">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="co"># fit a model</span></span>
-<span id="cb30-2"><a href="#cb30-2"></a><span class="fu">library</span>(conmat)</span>
-<span id="cb30-3"><a href="#cb30-3"></a>fairfield_age_pop <span class="ot">&lt;-</span> <span class="fu">abs_age_lga</span>(<span class="st">"Fairfield (C)"</span>)</span>
-<span id="cb30-4"><a href="#cb30-4"></a>fairfield_age_pop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># fit a model</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="fu">library</span>(conmat)</span>
+<span id="cb31-3"><a href="#cb31-3"></a>fairfield_age_pop <span class="ot">&lt;-</span> <span class="fu">abs_age_lga</span>(<span class="st">"Fairfield (C)"</span>)</span>
+<span id="cb31-4"><a href="#cb31-4"></a>fairfield_age_pop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 18 × 4
    lga           lower.age.limit  year population
@@ -2344,19 +2360,19 @@ $all
 <section id="alt-approach-to-conmat-model-1" class="slide level2">
 <h2>Alt approach to conmat model</h2>
 <div class="cell" data-hash="index_cache/revealjs/alt-fit_102cabfa484fb20fe2bb1bea4c76d52e">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>polymod_contact_data <span class="ot">&lt;-</span> <span class="fu">get_polymod_setting_data</span>()</span>
-<span id="cb32-2"><a href="#cb32-2"></a>polymod_survey_data <span class="ot">&lt;-</span> <span class="fu">get_polymod_population</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>polymod_contact_data <span class="ot">&lt;-</span> <span class="fu">get_polymod_setting_data</span>()</span>
+<span id="cb33-2"><a href="#cb33-2"></a>polymod_survey_data <span class="ot">&lt;-</span> <span class="fu">get_polymod_population</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="alt-approach-to-conmat-model-2" class="slide level2">
 <h2>Alt approach to conmat model</h2>
 <div class="cell" data-hash="index_cache/revealjs/alt-fit-2_f0988bf495ed617a1c3953b8926d2dbd">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>setting_models <span class="ot">&lt;-</span> <span class="fu">fit_setting_contacts</span>(</span>
-<span id="cb33-2"><a href="#cb33-2"></a>  <span class="at">contact_data_list =</span> polymod_contact_data,</span>
-<span id="cb33-3"><a href="#cb33-3"></a>  <span class="at">population =</span> polymod_survey_data</span>
-<span id="cb33-4"><a href="#cb33-4"></a>  )</span>
-<span id="cb33-5"><a href="#cb33-5"></a></span>
-<span id="cb33-6"><a href="#cb33-6"></a><span class="fu">str</span>(setting_models)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>setting_models <span class="ot">&lt;-</span> <span class="fu">fit_setting_contacts</span>(</span>
+<span id="cb34-2"><a href="#cb34-2"></a>  <span class="at">contact_data_list =</span> polymod_contact_data,</span>
+<span id="cb34-3"><a href="#cb34-3"></a>  <span class="at">population =</span> polymod_survey_data</span>
+<span id="cb34-4"><a href="#cb34-4"></a>  )</span>
+<span id="cb34-5"><a href="#cb34-5"></a></span>
+<span id="cb34-6"><a href="#cb34-6"></a><span class="fu">str</span>(setting_models)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 4
  $ home  :List of 54
@@ -3921,13 +3937,13 @@ $all
 <section id="alt-approach-to-conmat-model-3" class="slide level2">
 <h2>Alt approach to conmat model</h2>
 <div class="cell" data-hash="index_cache/revealjs/alt-fit-3_074781c7c54b570c247aea7607b9997c">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>synthetic_settings_5y_fairfield <span class="ot">&lt;-</span> <span class="fu">predict_setting_contacts</span>(</span>
-<span id="cb35-2"><a href="#cb35-2"></a>  <span class="at">population =</span> fairfield_age_pop,</span>
-<span id="cb35-3"><a href="#cb35-3"></a>  <span class="at">contact_model =</span> setting_models,</span>
-<span id="cb35-4"><a href="#cb35-4"></a>  <span class="at">age_breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">85</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="cn">Inf</span>)</span>
-<span id="cb35-5"><a href="#cb35-5"></a>  )</span>
-<span id="cb35-6"><a href="#cb35-6"></a></span>
-<span id="cb35-7"><a href="#cb35-7"></a>synthetic_settings_5y_fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>synthetic_settings_5y_fairfield <span class="ot">&lt;-</span> <span class="fu">predict_setting_contacts</span>(</span>
+<span id="cb36-2"><a href="#cb36-2"></a>  <span class="at">population =</span> fairfield_age_pop,</span>
+<span id="cb36-3"><a href="#cb36-3"></a>  <span class="at">contact_model =</span> setting_models,</span>
+<span id="cb36-4"><a href="#cb36-4"></a>  <span class="at">age_breaks =</span> <span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">85</span>, <span class="at">by =</span> <span class="dv">5</span>), <span class="cn">Inf</span>)</span>
+<span id="cb36-5"><a href="#cb36-5"></a>  )</span>
+<span id="cb36-6"><a href="#cb36-6"></a></span>
+<span id="cb36-7"><a href="#cb36-7"></a>synthetic_settings_5y_fairfield</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$home
                [0,5)     [5,10)    [10,15)     [15,20)    [20,25)    [25,30)

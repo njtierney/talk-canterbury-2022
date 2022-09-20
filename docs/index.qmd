@@ -83,27 +83,27 @@ nipa <- list(red = "#c03018",
 
 -   Explain **how** I came to help write software for infectious disease modelling
 
--   Touch on the **overall** approach for methods (not enough time). The majority of my role was on software and interface design.
+-   Touch on the **overall** approach for methods. A large portion of my role was on software and interface design.
 
--   Instead, I'll discuss **why** we needed our own method & software design decisions
+-   Discuss **why** we needed our own method + software design decisions
 
 -   Advocate for contributions of **software design + statistical thinking**: *the way of the research software engineer*, so to speak.
 
 
 ## The story so far
 
--   2008-2012: Undergraduate + honours in Psychology
+-   2008-2012: Undergrad + honours in Psychology \@ UQ
 
--   2013 - 2017: PhD Statistics, QUT
+-   2013 - 2017: PhD Statistics \@ QUT
 
     -   Exploratory Data Analysis (EDA)
     -   Bayesian / Geospatial statistics / Optimal placement
 
--   2018 - 2020: Research Fellow / Lecturer at Monash
+-   2018 - 2020: Research Fellow / Lecturer \@ Monash
 
     -   Design and improve tools for EDA
 
--   2020 - 2022: Research Software Engineer \@ Telethon Kids Institute
+-   2020 - 2022: **Research Software Engineer** \@ Telethon Kids Institute
 
     -   Maintain and design tools for data analysis
 
@@ -116,6 +116,29 @@ nipa <- list(red = "#c03018",
 
 \- Enjoy running long distances on trails (80K, 50K, 55K, preparing for a 168K race)
 :::
+
+
+## Define: Research Software Engineer
+
+> A Research Software Engineer (RSE) combines professional software engineering expertise with an intimate understanding of research.
+
+-- (from https://society-rse.org/about/)
+
+## What sorts of things does an RSE do?
+
+- Create software to **solve research problems**
+- Develop tools that **abstract the right components** to facilitate research
+- Help researchers to **find and learn** good tools
+- Support researchers with (computational) reproducibility
+
+
+- (adapted from Heidi Seibold's [UseR2021 Keynote talk](https://docs.google.com/presentation/d/1XQc2U2X8hiK43UzUi9IwvsvULxhVy0WzWSa_Kt4ZJv4/view#slide=id.gdbfb32d486_0_448))
+
+
+::: notes
+I bring this up because I feel a bit of a need to explain my background to help explain the context of what I do
+:::
+
 
 ## `visdat::vis_dat(airquality)`
 
@@ -247,7 +270,7 @@ distribution(y) <- binomial(n, p)
 
 :::
 
-::: {.column width="45%"}
+::: {.column width="50%"}
 
 ```{r}
 #| label: tf-examples
@@ -268,7 +291,7 @@ include_graphics("images/greta-extendable.png")
 # `greta.gp`
 
 
-> `greta.gp` extends `greta` to let you define Gaussian processes as part of your model. It provides a syntax to create and combine GP kernels, and use them to define either full rank or sparse Gaussian processes.
+> Extends `greta` to let you define Gaussian processes as part of your model. It provides a syntax to create and combine GP kernels, and use them to define either full rank or sparse Gaussian processes.
 
 :::: {.columns}
 
@@ -296,28 +319,6 @@ include_graphics("images/greta-extendable-gp.png")
 :::
 
 ::::
-
-## Define: Research Software Engineer
-
-> A Research Software Engineer (RSE) combines professional software engineering expertise with an intimate understanding of research.
-
--- (from https://society-rse.org/about/)
-
-## What sorts of things does an RSE do?
-
-- Create software to **solve research problems**
-- Develop tools that **abstract the right components** to facilitate research
-- Help researchers to **find and learn** good tools
-- Support researchers with (computational) reproducibility
-
-
-- (adapted from Heidi Seibold's [UseR2021 Keynote talk](https://docs.google.com/presentation/d/1XQc2U2X8hiK43UzUi9IwvsvULxhVy0WzWSa_Kt4ZJv4/view#slide=id.gdbfb32d486_0_448))
-
-
-::: notes
-I bring this up because I feel a bit of a need to explain my background to help explain the context of what I do
-:::
-
 
 ## Joining an infectious disease team
 
@@ -481,7 +482,7 @@ ggplot(df_contact_ages,
 
 -   [Mossong et al](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074) have this for 8 countries in Europe
 
-- Referred to as the POLYMOD study
+- Referred to as the **POLYMOD** study
 
 ::: notes
 -   So we have a pretty good idea of the amount of contact people have in Europe.
@@ -513,7 +514,7 @@ ggplot(df_contact_ages,
 
 -   Pre-existing statistical methodologies project empirical contact matrices to new countries.
 -   New projected contact matrices: "synthetic contact matrices"
--   Use existing contact surveys (e.g., Mossong)
+-   Use existing contact surveys (e.g., **POLYMOD**)
 -   Use setting-specific survey data on household, school, classroom, and workplace composition
 -   Combine with empirical data on contact patterns in Europe using statistical models
 
@@ -528,22 +529,20 @@ ggplot(df_contact_ages,
 
 -   $X^{L}_{i,\alpha} \sim Poisson(\mu_{i, \alpha}^{L})$
 
--   $X^{L}_{i,\alpha}$ is the number of contacts made by individual $i$ at a particular location $L$ with someone in age group $\alpha$ is modelled to be Poisson with mean $\mu_{i}^{L}$.
+-   $X^{L}_{i,\alpha}$ is the number of contacts made by individual $i$ at a particular location $L$ with someone in age group $\alpha$ is modelled to be Poisson with mean $\mu_{i, \alpha}^{L}$.
 
 -   the ages of individual $i$, $\alpha_i$, and their contact, $\alpha$ are broken into 5 year age intervals
 
--   $L$ denotes contact location: L = ... H (Home), W (Work), S (School), O (other)
+-   $L$ is contact location: L = ...Home, Work, School, Other
 
 - Main thrust: Contact matrices are projected because the age distribution of population is included in $\mu$
 
-## Brief explainer of Prem
+## Core ideas of Prem
 
--   Core ideas:
-
-    -   Build a model from the POLYMOD study, predicting number of contacts
-    -   Incorporate key age information for different locations (home, work, school, other)
-    -   Extrapolate the number of contacts to different countries, using age information from those countries
-    -   Create a new contact matrix for a given country
+-   Build a model from the POLYMOD study, predicting number of contacts
+-   Incorporate key age information for different locations (home, work, school, other)
+-   Extrapolate the number of contacts to different countries, using age information from those countries
+-   Create a new contact matrix for a given country
 
 ##  {background-image="images/prem-dir-mats.png" background-size="contain"}
 
@@ -621,13 +620,39 @@ extrapolate_from_data(
 
 ## Building our own extension
 
-- Nick Golding wrote a new method that was able to be more flexible, using GAMs instead of Bayesian approach.
+- Nick Golding wrote a new method that was able to be more flexible, using Generalised Additive Models (GAMs) instead of Bayesian approach.
 
 - I was tasked with writing software from initial model fitting code, with guidance from Nick
 
 - Named the package, `conmat`, ([repo](https://github.com/njtierney/conmat)), creating a home for code for others to contribute to.
 
 - In R package form, this made it easier for us to develop and extend software on demand for our needs
+
+## How does the model work?
+
+(simplified)
+
+```r
+mgcv::bam(
+  formula = contacts ~
+    # deviation of contact age distribution from population age distribution
+    s(age_to) +
+    # number of contacts by age
+    s(age_from) +
+    # intergenerational contact patterns - enables the off-diagonals
+    s(abs(age_from - age_to)) +
+    # interaction between intergenerational patterns and age_from, to remove
+    # ridge for some ages and settings
+    s(abs(age_from - age_to), age_from) +
+    # probabilities of both attending (any) school/work
+    school_probability +
+    work_probability +
+    offset(school_popn/work_popn),
+    family = stats::poisson,
+    # NOTE: the offset of participants allows us to get the rate per person
+    offset = log(participants)
+    )
+```
 
 ## Demonstration of conmat
 
@@ -692,14 +717,11 @@ synthetic_polymod_oz <- extrapolate_polymod(
 plot_matrix(synthetic_polymod_oz$home)
 ```
 
-# How the model works
-
-
 
 ## Create A Next Generation Matrix
 
 * Once infected, a person can transmit an infectious disease to another, creating **generations** of infected individuals. 
-* We can define a matrix describing the **number of newly infected** individuals in given categories, such as age, for consecutive generations. 
+* We can define a matrix describing the **number of newly infected** individuals in age groups, for consecutive generations. 
 * This matrix is called a **next generation matrix** (NGM).
 
 ## Create A Next Generation Matrix
@@ -759,6 +781,7 @@ ngm_vacc_fairfield
 
 - Model fitting is fixed and rigid
   - Although there are arguments for `age_break`
+  - You cannot change the model formula (yet)
 - Design decision to provide access to fitting the model
 - Tradeoff: **easy to use** vs **more complex to create**
 
@@ -836,7 +859,7 @@ ngm_fairfield <- generate_ngm(
 ## Challenges in Design: Australian-Centric
 
 - Change of interface means breaking existing code
-- Can get around this with versioning and releases, or two functions
+- Can instead use versioning & releases, or 2 functions
 
 :::: {.columns}
 
@@ -875,8 +898,8 @@ generate_ngm(
   
 ## Challenges in Design
 
-- Rigid model design means easy to use, at cost of flexibility
-- Specified variable names is fragile, but saves typing
+- Rigid design means easy to use at **cost of flexibility**
+- Specified variable names is fragile, but **saves typing**
 - Extra functions could always be added to be more flexible variants
 
 ## Future Directions
